@@ -1,0 +1,22 @@
+.footer { background: linear-gradient(135deg, #0f172a, #1e293b); color: white; padding: 3rem 2rem 2rem; margin-top: auto; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+.content { max-width: 1200px; margin: 0 auto; }
+.footerTop { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+.footerSection h4 { font-size: 1.125rem; font-weight: 700; margin-bottom: 1rem; color: #38bdf8; }
+.footerSection ul { list-style: none; padding: 0; margin: 0; }
+.footerSection ul li { margin-bottom: 0.75rem; }
+.footerSection ul li a { color: #94a3b8; text-decoration: none; transition: all 0.2s ease; font-size: 0.9375rem; }
+.footerSection ul li a:hover { color: #38bdf8; transform: translateX(5px); }
+.socialLinks { display: flex; gap: 1rem; }
+.socialLink { width: 40px; height: 40px; background: rgba(255, 255, 255, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.25rem; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(255, 255, 255, 0.2); }
+.socialLink:hover { background: linear-gradient(135deg, #2563eb, #0ea5e9); transform: translateY(-3px) scale(1.1); border-color: #38bdf8; }
+.footerBottom { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1); flex-wrap: wrap; gap: 1rem; }
+.footerBottom p { margin: 0; color: #64748b; font-size: 0.875rem; }
+.legalLinks { display: flex; gap: 1.5rem; }
+.legalLinks .link { color: #64748b; text-decoration: none; font-size: 0.875rem; transition: color 0.2s ease; }
+.legalLinks .link:hover { color: #38bdf8; }
+
+@media (max-width: 768px) {
+  .footerTop { grid-template-columns: 1fr; }
+  .footerBottom { flex-direction: column; text-align: center; }
+  .legalLinks { flex-direction: column; gap: 0.75rem; }
+}

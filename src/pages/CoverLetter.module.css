@@ -1,0 +1,71 @@
+.container{
+
+    max-width:900px;
+    margin:auto;
+    padding:40px;
+
+}
+
+.form{
+
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+
+}
+
+input,
+textarea{
+
+    width:100%;
+    padding:15px;
+
+    border-radius:10px;
+
+    border:1px solid #ddd;
+
+    font-size:16px;
+
+}
+
+button{
+
+    padding:15px;
+
+    background:#2563eb;
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+}
+
+button:hover{
+
+    background:#1d4ed8;
+
+}
+
+.result{
+
+    margin-top:40px;
+
+}
+
+.result textarea{
+
+    width:100%;
+
+}
+
+.error{
+
+    color:red;
+
+    margin-top:20px;
+
+}
