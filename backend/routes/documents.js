@@ -252,8 +252,13 @@ router.post("/portfolio", protect, async (req, res) => {
 // GET /api/documents/my-documents
 // ======================================================
 router.get("/my-documents", protect, async (req, res) => {
-
   try {
+    const dbConnected = mongoose.connection.readyState === 1;
+
+    // Development mode: no MongoDB
+    if (!dbConnected) {
+      return res.status(200).json([]);
+    }
 
     const documents = await Document.find({
       user: req.user._id,
@@ -264,14 +269,12 @@ router.get("/my-documents", protect, async (req, res) => {
     res.status(200).json(documents);
 
   } catch (error) {
-
     console.error(error);
 
     res.status(500).json({
       success: false,
       message: error.message,
     });
-
   }
 });
 
