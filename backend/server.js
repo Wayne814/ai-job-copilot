@@ -14,6 +14,12 @@ connectDB();
 
 const app = express();
 
+//allow api calls from our vite frontend
+app.use(cors({
+  origin: 'https://ai-job-copilot-omega.vercel.app/',
+  credentials: true
+}));
+
 // Middleware
 app.use(cors());
 app.use(express.json());
