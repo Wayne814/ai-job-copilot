@@ -16,7 +16,7 @@ const app = express();
 
 //allow api calls from our vite frontend
 app.use(cors({
-  origin: 'https://ai-job-copilot-omega.vercel.app',
+  origin: 'https://ai-job-copilot-ro9j.vercel.app',
   credentials: true
 }));
 
